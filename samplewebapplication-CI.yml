@@ -6,6 +6,6 @@ resources:
     
     stages:
       - stage: build_stage
-      - template: Templates/dotnet-build.yml@templates
-        parameters: 
-          branch: dev
+        - template: Templates/dotnet-build.yml@templates
+          parameters: 
+            branch: dev
