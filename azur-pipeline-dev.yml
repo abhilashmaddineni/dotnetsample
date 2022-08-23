@@ -34,8 +34,4 @@ steps:
     configuration: '$(buildConfiguration)'
     
   
-  - task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+
