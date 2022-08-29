@@ -7,7 +7,7 @@ trigger:
 - dev
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'laptop-agent'
 
 variables:
   solution: '**/*.sln'
