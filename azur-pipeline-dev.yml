@@ -7,7 +7,7 @@ trigger:
 - dev
 
 pool:
-  vmImage: 'laptop-agent'
+  name: 'laptop-agent'
 
 variables:
   solution: '**/*.sln'
