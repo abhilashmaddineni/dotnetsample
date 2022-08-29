@@ -44,3 +44,18 @@ steps:
     SourceFolder: '$(Build.ArtifactStagingDirectory)'
     Contents: '**'
     TargetFolder: 'D:\code\sample\'
+
+- task: IISWebAppManagementOnMachineGroup@0
+  inputs:
+    IISDeploymentType: 'IISWebsite'
+    ActionIISWebsite: 'CreateOrUpdateWebsite'
+    WebsiteName: 'Default Web Site'
+    WebsitePhysicalPath: 'D:\code\sample\'
+    WebsitePhysicalPathAuth: 'WebsiteUserPassThrough'
+    AddBinding: true
+    Bindings: 'http/All Unassigned:80:'
+
+- task: IISWebAppDeploymentOnMachineGroup@0
+  inputs:
+    WebSiteName: 'Default Web Site'
+    Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
