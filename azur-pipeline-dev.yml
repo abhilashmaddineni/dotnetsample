@@ -39,11 +39,6 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(Build.ArtifactStagingDirectory)'
-    Contents: '**'
-    TargetFolder: 'D:\code\sample\'
 
 - task: IISWebAppManagementOnMachineGroup@0
   inputs:
