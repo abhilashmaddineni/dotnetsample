@@ -3,19 +3,11 @@
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
-parameters:
-- name: image
-  displayName: Pool Image
-  type: string
-  values:
-  - windows-latest
-  - ubuntu-latest
-  - macOS-latest
+trigger:
+- dev
 
-trigger: dev
-
-pool: 
-  vmImage: ${{ parameters.image }}
+pool:
+  vmImage: 'windows-latest'
 
 variables:
   solution: '**/*.sln'
