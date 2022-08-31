@@ -7,7 +7,7 @@ trigger:
 - dev
 
 pool:
-  name: 'laptop-agent'
+  name: 'Windows-latest'
 
 variables:
   solution: '**/*.sln'
