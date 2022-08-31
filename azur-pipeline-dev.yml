@@ -14,7 +14,7 @@ trigger:
 - dev
 
 pool:
-  vmImage: ${{ parameters.pool }}
+  vmImage: ${{parameters.pool}}
 
 variables:
   solution: '**/*.sln'
