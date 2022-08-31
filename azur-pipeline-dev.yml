@@ -4,17 +4,18 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 parameters:
-  - name: pool
-    type: string
-    values:
-      - windows-latest
-      - ubantu-latest
+- name: image
+  displayName: Pool Image
+  type: string
+  values:
+  - windows-latest
+  - ubuntu-latest
+  - macOS-latest
 
-trigger:
-- dev
+trigger: dev
 
-pool:
-  vmImage: ${{parameters.pool}}
+pool: 
+  vmImage: ${{ parameters.image }}
 
 variables:
   solution: '**/*.sln'
