@@ -1,0 +1,11 @@
+resources:
+      repositories:
+        - repository: templates
+          type: git
+          name: SarDevops/templates
+    
+    stages:
+      - stage: build_stage
+        - template: Templates/dotnet-build.yml@templates
+          parameters: 
+            branch: dev
